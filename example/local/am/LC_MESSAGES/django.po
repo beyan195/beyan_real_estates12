@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-02 11:43+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: beyan_real_estates/settings.py:157
+msgid "English"
+msgstr "እንግሊዝኛ"
+
+#: beyan_real_estates/settings.py:157
+msgid "Amharic"
+msgstr "አማርኛ"
+
+#: beyan_real_estates/settings.py:283
+msgid "Dev"
+msgstr "ልማት"
+
+#: beyan_real_estates/settings.py:289
+msgid "Production"
+msgstr "ምርት"
+
+#: blog/apps.py:7
+msgid "Blog"
+msgstr "ብሎግ"
+
+#: blog/models.py:22
+msgid "House"
+msgstr "ቤት"
+
+#: blog/models.py:24
+msgid "Car"
+msgstr "መኪና"
+
+#: blog/models.py:30
+msgid "unique_id"
+msgstr "ልዩ መታወቂያ"
+
+#: blog/models.py:33
+msgid "title"
+msgstr "ርዕስ"
+
+#: blog/models.py:35
+msgid "description"
+msgstr "መግለጫ"
+
+#: blog/models.py:39
+msgid "cover"
+msgstr "ሽፋን"
+
+#: blog/models.py:46
+msgid "type"
+msgstr "ዓይነት"
+
+#: blog/models.py:49
+msgid "is open"
+msgstr "ክፍት ነው"
+
+#: blog/models.py:52
+msgid "views"
+msgstr "እይታዎች"
+
+#: blog/models.py:55
+msgid "created at"
+msgstr "የተፈጠረው በ"
+
+#: blog/models.py:61
+msgid "Post"
+msgstr "ለጥፍ"
+
+#: blog/models.py:62
+msgid "Posts"
+msgstr "ልጥፎች"
+
+#: blog/models.py:71
+msgid "image"
+msgstr "ፎቶግራፎች"
+
+#: blog/models.py:77
+msgid "post"
+msgstr "ለጥፍ"
+
+#: blog/models.py:86
+msgid "Image"
+msgstr "ፎቶግራፎች"
+
+#: blog/models.py:87
+msgid "Images"
+msgstr "ምስሎች"
+
+#: users/admin.py:25 users/admin.py:32
+msgid "Permissions"
+msgstr "ፈቃዶች"
+
+#: users/admin.py:30
+msgid "Personal info"
+msgstr "የግል መረጃ"
+
+#: users/admin.py:45
+msgid "Important dates"
+msgstr "አስፈላጊ ቀናት"
+
+#: users/admin.py:58
+msgid "Beyan Real Estates site admin"
+msgstr "ቤያን ሪል እስቴት ጣቢያ አስተዳደር"
+
+#: users/admin.py:59
+msgid "Beyan Real Estates Dashboard"
+msgstr "ቤያን ሪል እስቴት ዳሽቦርድ"
+
+#: users/admin.py:60
+msgid "Welcome to Beyan Real Estates"
+msgstr "ወደ ቤያን ሪል እስቴት እንኳን በደህና መጡ"
+
+#: users/apps.py:7
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#: users/models.py:7
+msgid "profile"
+msgstr "መገለጫ"
+
+#: users/models.py:8
+msgid "profiles"
+msgstr "መገለጫዎች"
+
+#: users/validators.py:6
+msgid "This name cannot be registered.Please choose a different name."
+msgstr "ይህ ስም መመዝገብ አይችልም። እባክዎ የተለየ ስም ይምረጡ።"
+
+#: users/validators.py:8
+msgid ""
+"This email address cannot be registered. Please supply a different email "
+"address."
+msgstr "ይህ የኢሜይል አድራሻ መመዝገብ አይችልም። እባክዎ የተለየ ኢሜይል ያቅርቡ ” አድራሻ"
+
+#: users/validators.py:243 users/validators.py:260 users/validators.py:270
+msgid "invalid"
+msgstr "ልክ ያልሆነ"
+
+#: users/validators.py:270
+#, python-brace-format
+msgid "{value} is reserved and cannot be registered."
+msgstr "{value} ተይ andል እና መመዝገብ አይችልም።"

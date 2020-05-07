@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+
+{% block content %}
+
+    <!-- Property Details Section Begin -->
+    <br>
+    <br>
+    <br>
+    <section class="property-details-section">
+        <div class="property-pic-slider owl-carousel">
+            <div class="ps-item">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-12 p-0">
+                                    <a href="{{ post.cover.url }}" data-lightbox="roadtrip">
+                                        <div class="ps-item-inner large-item set-bg" data-setbg="{{ post.cover.url }}"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                {% for image in post.images.all %}
+
+                                <div class="col-sm-6 p-0">
+                                    <a href="{{ image.image.url }}" data-lightbox="roadtrip">
+                                        <div class="ps-item-inner set-bg" data-setbg="{{ image.image.url }}"></div>
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="pd-text">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="pd-title">
+                                    <div class="label">For rent</div>
+                                    <div class="pt-price">{{ post.created_at|naturaltime }}</div>
+                                    <h3>{{ post.title }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pd-board">
+                            <div class="tab-board">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">{% blocktrans %}Overview{% endblocktrans %}</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">{% blocktrans %}Description{% endblocktrans %}</a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                                        <div class="tab-details">
+                                            <ul class="left-table">
+                                                <li>
+                                                    <span class="type-name">{% blocktrans %}Property Type{% endblocktrans %}</span>
+                                                    <span class="type-value">{{ post.type }}</span>
+                                                </li>
+                                                <li>
+                                                    <span class="type-name">{% blocktrans %}Contract type{% endblocktrans %}</span>
+                                                    <span class="type-value">{% blocktrans %}Rent{% endblocktrans %}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tabs-2" role="tabpanel">
+                                        <div class="tab-desc">
+                                            <p>{{ post.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Property Details Section End -->
+
+{% endblock content %}

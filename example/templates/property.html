@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+
+{% block content %}
+    <section class="property-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h4>{% blocktrans %}PROPERTY{% endblocktrans %}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="property-item">
+                        <div class="pi-pic set-bg" data-setbg="{{ post.cover.url }}">
+                            <div class="label">{% blocktrans %}For rent{% endblocktrans %}</div>
+                        </div>
+                        <div class="pi-text">
+                            <h5><a href="{% url 'property_detail' post.unique_id %}">{{ post.title }}</a></h5>
+                            <p><span class="icon_pin_alt"></span> {{ post.description|truncatewords:5 }}</p>
+                            <ul>
+                                <li><i class="fa fa-eye"></i> {{ post.views }}</li>
+                            </ul>
+                            <div class="pi-agent">
+                                <div class="pa-item">
+                                    <div class="pa-info">
+                                        <h6>{{ post.type }}</h6>
+                                    </div>
+                                    <div class="pa-text">
+                                        {{ post.created_at|naturaltime }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
