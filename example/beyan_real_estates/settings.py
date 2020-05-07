@@ -2,7 +2,7 @@
 Django base settings for beyan real estates project.
 """
 
-import pathlib, os
+import pathlib
 from datetime import timedelta
 
 from decouple import Csv, config
@@ -16,10 +16,10 @@ BASE_DIR = pathlib.Path().absolute()
 TEMPLATES_DIR = [BASE_DIR.joinpath("templates")]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#debug
-DEBUG = True
+DEBUG = config("DEBUG", cast=bool)
 
 # using python-decouple to hide the SECRET_KEY
-SECRET_KEY = 't9nt&!sqp)gpv!wiv($gh56y9ktzew@@8xanq-2_yo@p7a1^6t'
+SECRET_KEY = config("SECRET_KEY")
 
 ALLOWED_HOSTS = ['*']
 
@@ -208,11 +208,11 @@ if DEBUG:
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': os.environ.get('QOVERY_DATABASE_MY_DB_DATABASE', 'postgres'),
-    'USER': os.environ.get('QOVERY_DATABASE_MY_DB_USERNAME', 'postgres'),
-    'PASSWORD': os.environ.get('QOVERY_DATABASE_MY_DB_PASSWORD', 'postgres'),
-    'HOST': os.environ.get('QOVERY_DATABASE_MY_DB_HOST', 'localhost'),
-    'PORT': os.environ.get('QOVERY_DATABASE_MY_DB_PORT', 5432),
+    'NAME': config("QOVERY_DATABASE_MY_DB_DATABASE", default='postgres'),
+    'USER': config('QOVERY_DATABASE_MY_DB_USERNAME', default='postgres'),
+    'PASSWORD': config('QOVERY_DATABASE_MY_DB_PASSWORD', default='postgres'),
+    'HOST': config('QOVERY_DATABASE_MY_DB_HOST', default='localhost'),
+    'PORT': config('QOVERY_DATABASE_MY_DB_PORT', default=5432),
   }
 }
 
