@@ -2,7 +2,7 @@
 Django base settings for beyan real estates project.
 """
 
-import pathlib
+import pathlib, os
 from datetime import timedelta
 
 from decouple import Csv, config
